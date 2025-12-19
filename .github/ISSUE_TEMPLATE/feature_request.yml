@@ -2,8 +2,8 @@ name: Feature Request
 description: Suggest an idea for this project
 title: "[Feature]: "
 labels: ["enhancement"]
-projects: [] # ใส่ ID โปรเจกต์ได้ถ้าต้องการ (เหมือนใน Bug Report)
-assignees: [] # ใส่ชื่อคนรับผิดชอบได้ (เหมือนใน Bug Report)
+projects: []
+assignees: []
 body:
   - type: markdown
     attributes:
@@ -33,6 +33,20 @@ body:
       placeholder: Explain the problem this feature solves.
     validations:
       required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which part of the project does this feature apply to?
+      multiple: true
+      options:
+        - Frontend (UI/UX)
+        - Backend (API/Logic)
+        - Database
+        - Documentation
+        - Other
+    validations:
+      required: false
   - type: dropdown
     id: priority
     attributes:
